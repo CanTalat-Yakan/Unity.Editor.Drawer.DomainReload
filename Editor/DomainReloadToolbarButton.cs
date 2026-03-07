@@ -22,7 +22,10 @@ namespace UnityEssentials
                 reloadContent.tooltip = busy ? "Domain Reload (busy)" : "Domain Reload";
 
                 if (GUILayout.Button(reloadContent))
+                {
                     EditorUtility.RequestScriptReload();
+                    AssetDatabase.Refresh();
+                }
 
                 GUILayout.Space(5);
             }
